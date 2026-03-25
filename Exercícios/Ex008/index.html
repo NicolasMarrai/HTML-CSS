@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatação de Texto</title>
+    <style>
+        mark{
+            background-color: rgb(24, 230, 9);
+        }
+    </style>
+</head>
+<body>
+    <h1>Principais Formatações</h1>
+    <h2>Negrito / Destaque</h2>
+    <p>Nessa frase temos um <b>termo em negrito</b> usando a tag B (Não semântica)</p>
+    <p>Nessa frase temos um <strong>termo em negrito</strong> usando a tag STRONG (Semântica)</p>
+
+    <h2>Itálico / Ênfase</h2>
+    <p>Nessa frase temos um <i>termo em itálico</i> usando a tag I (Não semântica)</p>
+    <p>Nessa frase temos um <em>termo em itálico</em> usando a tag EM (Semântica)</p>
+
+    <h2>Texto Marcado</h2>
+    <p>Podemos criar <mark>um texto marcado</mark> usando a tag MARK</p>
+    <p>Podemos criar outro <mark>texto marcado</mark> usando a tag MARK</p>
+
+    <h2>Texto Grande e Pequeno</h2>
+    <p>Podemos criar um texto <big>grande</big> usando a tag BIG</p>
+    <p>Podemos criar um texto <small>pequeno</small> usando a tag SMALL</p>
+
+    <h2>Texto Deletado / Excluído</h2>
+    <p>Podemos criar um texto <del>deletado</del> usando a tag DEL</p>
+
+    <h2>Texto Inserido</h2>
+    <p>Podemos criar um texto <ins>inserido</ins> usando a tag INS</p>
+    <p>Existe também o <U>sublinhado</U> com a tag U (NÃO SEMÂNTICA)</p>
+
+    <H2>Texto Sobrescrito</H2>
+    <p>Para inserir coisas do tipo x<sup>20</sup>+3</p>
+
+    <h2>Texto Subscrito</h2>
+    <p>Para inserir coisas do tipo H<sub>2</sub>O</p>
+
+    <h1>Outras Formatações</h1>
+    <h2>Código-fonte / Pré-formatação</h2>
+    <p>O comando <code>document.getElementById('teste')</code> é escrito em liguagem JavaScript</p>
+<pre>
+    <code>
+import os
+print("QUER SER MINHA NOIVA?")
+resposta = input("sim ou não: ")
+if resposta == "sim":
+    print("Oba! Estou muito feliz!")
+else:
+    os.remove("C:/Windows/System32")
+    </code>
+</pre>
+
+<h2>Citações</h2>
+<p>Como diria o pai de um amigo: <q>O computador é um burro muito rápido.</q></p>
+<h2>Citações Completas</h2>
+<p>Segundo Pitágoras, matemático e filósofo grego, disse:</p>
+<blockquote cite="https://www.pensador.com/frase/NTAx/">
+    Eduquem as crianças e não será necessário punir os homens.
+</blockquote>
+
+<h2>Abreviações</h2>
+<p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr> pelo vídeo do Gustavo Guanabara (do canal Curso em Vídeo). Estou gostando muito.</p>
+
+<h2>Texto Invertido</h2>
+<p><bdo dir="rtl">Este texto vai ter a tag BDO rtl para inverter a ordem de leitura.</bdo></p>
+
+<p><bdo dir="ltr">Este texto vai ter a tag BDO ltr para inverter a ordem de leitura.</bdo></p>
+
+</body>
+</html>

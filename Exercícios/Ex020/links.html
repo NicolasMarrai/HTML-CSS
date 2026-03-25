@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Links</title>
+  </head>
+  <style>
+    body {
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    }
+
+    a {
+      color: rgb(181, 189, 11);
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: rgb(8, 174, 30);
+    }
+
+    a:hover {
+      color: black;
+    }
+
+    a:active {
+      color: red;
+    }
+
+    .importante::before {
+      content: "-> ";
+    }
+
+    .importante::after {
+      content: " <-";
+    }
+
+    h1 {
+      background-color: lightgray;
+    }
+  </style>
+  <body>
+    <h1>Personalizando Links</h1>
+    <ul>
+      <li><a href="https://github.com/NicolasMarrai">Repositorio GitHub</a></li>
+      <li>
+        <a
+          href="https://www.linkedin.com/in/nicolas-marraí-7b3b5b1b4/"
+          class="importante"
+          >LinkedIn</a
+        >
+      </li>
+      <li><a href="https://www.udemy.com/user/nicolas-marraí/">Udemy</a></li>
+    </ul>
+  </body>
+</html>
