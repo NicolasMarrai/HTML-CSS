@@ -1,0 +1,14 @@
+:root {
+    --font-headline: 'Epilogue' sans-serif;
+    --font-body: 'plus-jakarta-sans' sans-serif;
+    --font-label: 'space grotesk' monospace;
+
+    --
+}
+
+nav {
+    font-family: var(--font-headline);
+
+  background-color: #131b2e;
+  height: 100px;
+}
