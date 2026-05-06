@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urbano Cozinha & Bar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ========================================
+       CABEÇALHO
+       Desafio: logo e nav na mesma linha
+       usando display: inline-block
+  ======================================== -->
+
+    <header class="cabecalho">
+      <div class="cabecalho-logo">
+        <span class="logo-nome">Urbano</span>
+        <span class="logo-slogan">Cozinha & Bar</span>
+      </div>
+
+      <nav class="cabecalho-nav">
+        <ul class="nav-lista">
+          <li class="nav-item">
+            <a href="#inicio" class="nav-link nav-link--ativo">Início</a>
+          </li>
+          <li class="nav-item">
+            <a href="#cardapio" class="nav-link">Cardápio</a>
+          </li>
+          <li class="nav-item"><a href="#sobre" class="nav-link">Sobre</a></li>
+          <li class="nav-item">
+            <a href="#contato" class="nav-link">Contato</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ========================================
+         SEÇÃO HERO
+         Apresentação principal do restaurante
+    ======================================== -->
+      <section id="inicio" class="hero">
+        <div class="hero-conteudo">
+          <p class="hero-label">Bem-vindo ao Urbano</p>
+          <h1 class="hero-titulo">Sabor com alma de cidade</h1>
+          <p class="hero-subtitulo">
+            Ingredientes frescos, receitas autorais, ambiente único
+          </p>
+          <a href="#cardapio" class="botao">Ver Cardápio</a>
+        </div>
+      </section>
+
+      <!-- ========================================
+         SEÇÃO CARDÁPIO
+         Desafio 1: 3 categorias lado a lado
+         Desafio 2: nome do prato e preço
+                    na mesma linha (sem flexbox)
+    ======================================== -->
+      <section id="cardapio" class="secao">
+        <div class="secao-cabecalho">
+          <h2 class="secao-titulo">Cardápio</h2>
+          <div class="secao-divisor"></div>
+        </div>
+
+        <div class="cardapio-grid">
+          <!-- Categoria: Entradas -->
+          <div class="categoria">
+            <h3 class="categoria-titulo">Entradas</h3>
+            <ul class="prato-lista">
+              <li class="prato-item">
+                <span class="prato-nome">Bruschetta ao tomate</span>
+                <span class="prato-preco">R$ 28</span>
+              </li>
+              <li class="prato-item">
+                <span class="prato-nome">Carpaccio clássico</span>
+                <span class="prato-preco">R$ 42</span>
+              </li>
+              <li class="prato-item">
+                <span class="prato-nome">Caldo de cana</span>
+                <span class="prato-preco">R$ 18</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Categoria: Pratos Principais -->
+          <div class="categoria">
+            <h3 class="categoria-titulo">Pratos principais</h3>
+            <ul class="prato-lista">
+              <li class="prato-item">
+                <span class="prato-nome">Filé ao molho madeira</span>
+                <span class="prato-preco">R$ 89</span>
+              </li>
+              <li class="prato-item">
+                <span class="prato-nome">Risoto de funghi</span>
+                <span class="prato-preco">R$ 67</span>
+              </li>
+              <li class="prato-item">
+                <span class="prato-nome">Salmão grelhado</span>
+                <span class="prato-preco">R$ 79</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Categoria: Sobremesas -->
+          <div class="categoria">
+            <h3 class="categoria-titulo">Sobremesas</h3>
+            <ul class="prato-lista">
+              <li class="prato-item">
+                <span class="prato-nome">Petit gâteau</span>
+                <span class="prato-preco">R$ 34</span>
+              </li>
+              <li class="prato-item">
+                <span class="prato-nome">Mousse de maracujá</span>
+                <span class="prato-preco">R$ 26</span>
+              </li>
+              <li class="prato-item">
+                <span class="prato-nome">Torta de limão</span>
+                <span class="prato-preco">R$ 28</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================
+         SEÇÃO SOBRE
+         Desafio: 3 diferenciais lado a lado
+         com classe reutilizável .diferencial
+    ======================================== -->
+      <section id="sobre" class="secao secao--escura">
+        <div class="secao-cabecalho">
+          <h2 class="secao-titulo">Sobre nós</h2>
+          <div class="secao-divisor"></div>
+        </div>
+
+        <p class="sobre-texto">
+          O Urbano nasceu da paixão por ingredientes frescos e receitas que
+          contam histórias. Cada prato é pensado para unir sabor e memória
+          afetiva num ambiente que mistura o rústico e o contemporâneo.
+        </p>
+
+        <div class="diferenciais-grid">
+          <div class="diferencial">
+            <span class="diferencial-icone">★</span>
+            <h4 class="diferencial-titulo">Ingredientes frescos</h4>
+            <p class="diferencial-descricao">
+              Selecionamos fornecedores locais todo dia
+            </p>
+          </div>
+
+          <div class="diferencial">
+            <span class="diferencial-icone">♨</span>
+            <h4 class="diferencial-titulo">Cozinha aberta</h4>
+            <p class="diferencial-descricao">
+              Você vê seu prato sendo preparado
+            </p>
+          </div>
+
+          <div class="diferencial">
+            <span class="diferencial-icone">◈</span>
+            <h4 class="diferencial-titulo">Ambiente único</h4>
+            <p class="diferencial-descricao">
+              Design que mistura rústico e moderno
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========================================
+       RODAPÉ
+       Logo + copyright à esquerda
+       Endereço + contato à direita
+  ======================================== -->
+    <footer id="contato" class="rodape">
+      <div class="rodape-marca">
+        <p class="rodape-nome">Urbano Cozinha & Bar</p>
+        <p class="rodape-copyright">© 2025 Todos os direitos reservados</p>
+      </div>
+
+      <address class="rodape-contato">
+        <p>Rua das Flores, 412 — Centro</p>
+        <p>Uberlândia, MG</p>
+        <p class="rodape-telefone">(34) 99999-0001</p>
+      </address>
+    </footer>
+  </body>
+</html>

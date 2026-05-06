@@ -1,0 +1,382 @@
+/* ================================================
+   URBANO COZINHA & BAR — style.css
+   Organização:
+   1. Reset e base
+   2. Variáveis (cores e espaçamentos)
+   3. Componentes reutilizáveis
+   4. Cabeçalho
+   5. Hero
+   6. Seção (estrutura genérica)
+   7. Cardápio
+   8. Sobre / Diferenciais
+   9. Rodapé
+================================================ */
+
+/* ------------------------------------------------
+   1. RESET E BASE
+------------------------------------------------ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, serif;
+  font-size: 1rem; /* 16px base */
+  line-height: 1.7;
+  color: #333;
+  background-color: #faf9f7;
+}
+
+/* ------------------------------------------------
+   2. VARIÁVEIS — defina aqui, use em todo o CSS
+   (comentários para referência, não são CSS real)
+
+   Cor primária (dourado):  #e8c97a
+   Cor escura (fundo dark): #1a1a1a
+   Cor média dark:          #2c2420
+   Cor média mais clara:    #3a2e28
+   Texto sobre fundo dark:  #fff / #aaa / #999
+   Fundo de seção clara:    #faf9f7
+   Fundo de seção escura:   #f2f0eb
+   Borda suave:             #ddd
+   Texto secundário:        #666
+------------------------------------------------ */
+
+/* ------------------------------------------------
+   3. COMPONENTES REUTILIZÁVEIS
+------------------------------------------------ */
+
+/* Botão — usado no hero, pode ser reusado */
+.botao {
+  display: inline-block;
+  background-color: #e8c97a;
+  color: #1a1a1a;
+  font-size: 0.875rem; /* 14px */
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 3px;
+}
+
+/* Cabeçalho genérico de seção */
+.secao-cabecalho {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.secao-titulo {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+/* Divisor decorativo abaixo do título */
+.secao-divisor {
+  width: 32px;
+  height: 2px;
+  background-color: #e8c97a;
+  margin: 0 auto;
+}
+
+/* ------------------------------------------------
+   4. CABEÇALHO
+   Desafio: logo e nav na mesma linha
+   Solução: inline-block nos dois filhos
+            + width calculada para cada um
+------------------------------------------------ */
+.cabecalho {
+  background-color: #1a1a1a;
+  padding: 14px 24px;
+  /* Remove espaço fantasma entre inline-block:
+     font-size: 0 no pai, restaurar nos filhos */
+  font-size: 0;
+}
+
+.cabecalho-logo {
+  display: inline-block;
+  width: 40%;
+  vertical-align: middle;
+}
+
+.logo-nome {
+  color: #fff;
+  font-size: 1.0625rem; /* ~17px */
+  font-weight: 500;
+}
+
+.logo-slogan {
+  color: #aaa;
+  font-size: 0.6875rem; /* ~11px */
+  margin-left: 8px;
+}
+
+.cabecalho-nav {
+  display: inline-block;
+  width: 60%;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.nav-lista {
+  list-style: none;
+  /* Remove espaço fantasma entre li inline-block */
+  font-size: 0;
+}
+
+.nav-item {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.nav-link {
+  color: #999;
+  font-size: 0.75rem; /* 12px */
+  text-decoration: none;
+}
+
+/* Estado ativo do link de navegação */
+.nav-link--ativo {
+  color: #e8c97a;
+  border-bottom: 1px solid #e8c97a;
+  padding-bottom: 1px;
+}
+
+/* ------------------------------------------------
+   5. HERO
+------------------------------------------------ */
+.hero {
+  background-color: #2c2420;
+  padding: 48px 24px;
+  text-align: center;
+  border-bottom: 2px solid #e8c97a;
+}
+
+.hero-conteudo {
+  background-color: #3a2e28;
+  border-radius: 4px;
+  padding: 32px 24px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.hero-label {
+  color: #e8c97a;
+  font-size: 0.6875rem; /* 11px */
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.hero-titulo {
+  color: #fff;
+  font-size: 1.75rem; /* 28px */
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitulo {
+  color: #bbb;
+  font-size: 0.875rem; /* 14px */
+  margin-bottom: 1.5rem;
+}
+
+/* ------------------------------------------------
+   6. SEÇÃO — estrutura genérica reutilizável
+------------------------------------------------ */
+.secao {
+  padding: 48px 24px;
+  background-color: #faf9f7;
+}
+
+/* Modificador: fundo levemente diferente */
+.secao--escura {
+  background-color: #f2f0eb;
+}
+
+/* ------------------------------------------------
+   7. CARDÁPIO
+   Desafio 1: 3 categorias lado a lado
+   Solução: inline-block + width: 33% (menos gaps)
+
+   Desafio 2: nome e preço na mesma linha
+   Solução: span com display inline-block,
+            prato-preco com float ou margin-left
+------------------------------------------------ */
+.cardapio-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  /* Elimina espaço fantasma entre inline-block */
+  font-size: 0;
+}
+
+.categoria {
+  display: inline-block;
+  width: 33.33%;
+  vertical-align: top;
+  padding: 0 12px;
+  /* Restaura tamanho de fonte */
+  font-size: 1rem;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Remove margem lateral do primeiro e último card */
+.categoria:first-child {
+  padding-left: 0;
+}
+.categoria:last-child {
+  padding-right: 0;
+}
+
+.categoria-titulo {
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  color: #e8c97a;
+  padding: 12px 14px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 0;
+}
+
+.prato-lista {
+  list-style: none;
+  padding: 0 14px;
+}
+
+.prato-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  /* Garante que o conteúdo interno se posicione */
+  overflow: hidden;
+  font-size: 0.75rem; /* 12px */
+  color: #666;
+}
+
+.prato-item:last-child {
+  border-bottom: none;
+}
+
+.prato-nome {
+  display: inline-block;
+}
+
+/* Preço empurrado para a direita */
+.prato-preco {
+  float: right;
+  color: #333;
+  font-weight: 500;
+}
+
+/* ------------------------------------------------
+   8. SOBRE / DIFERENCIAIS
+   Desafio: 3 diferenciais lado a lado
+   com a mesma classe .diferencial (reutilizável)
+   e mesma largura
+
+   Problema do espaço fantasma:
+   Há um gap invisível entre tags inline-block
+   causado pelo espaço/quebra de linha no HTML.
+   Solução: font-size: 0 no pai,
+            restaurar font-size nos filhos
+------------------------------------------------ */
+.sobre-texto {
+  font-size: 0.875rem; /* 14px */
+  color: #666;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto 2rem;
+}
+
+.diferenciais-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  /* Elimina espaço fantasma entre inline-block */
+  font-size: 0;
+}
+
+/* Classe reutilizável — mesma estrutura nos 3 cards */
+.diferencial {
+  display: inline-block;
+  width: 33.33%;
+  vertical-align: top;
+  text-align: center;
+  padding: 20px 16px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  /* Restaura tamanho de fonte */
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.diferencial-icone {
+  display: block;
+  font-size: 1.5rem; /* 24px */
+  color: #e8c97a;
+  margin-bottom: 8px;
+}
+
+.diferencial-titulo {
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.diferencial-descricao {
+  font-size: 0.75rem; /* 12px */
+  color: #666;
+}
+
+/* ------------------------------------------------
+   9. RODAPÉ
+   Logo + copyright à esquerda
+   Endereço à direita — mesma linha
+   Mesma solução do cabeçalho: inline-block
+------------------------------------------------ */
+.rodape {
+  background-color: #1a1a1a;
+  padding: 24px;
+  /* Elimina espaço fantasma */
+  font-size: 0;
+}
+
+.rodape-marca {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  /* Restaura fonte */
+  font-size: 1rem;
+}
+
+.rodape-nome {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.rodape-copyright {
+  color: #666;
+  font-size: 0.6875rem; /* 11px */
+}
+
+.rodape-contato {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  text-align: right;
+  font-style: normal;
+  /* Restaura fonte */
+  font-size: 0.6875rem; /* 11px */
+  color: #aaa;
+  line-height: 1.8;
+}
+
+.rodape-telefone {
+  color: #e8c97a;
+}
